@@ -3,6 +3,7 @@
 .idea
 
 # Folders to ignore
+bootstrap-select.iml
 node_modules
 .sass-cache
 
