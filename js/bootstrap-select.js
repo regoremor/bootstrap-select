@@ -480,7 +480,7 @@
       this.$element
         .after(this.$newElement)
         .prependTo(this.$newElement);
-      this.$button = this.$newElement.children('button');
+      this.$button = this.$newElement.children('.dropdown-toggle');
       this.$menu = this.$newElement.children('.dropdown-menu');
       this.$menuInner = this.$menu.children('.inner');
       this.$searchbox = this.$menu.find('input');
@@ -601,8 +601,8 @@
           : '';
       var drop =
           '<div class="dropdown bootstrap-select' + showTick + inputGroup + '">' +
-          '<button type="button" class="' + this.options.styleBase + ' dropdown-toggle" data-toggle="dropdown"' + autofocus + ' role="button">' +
-          '</button>' +
+          '<a href="#" class="' + this.options.styleBase + ' dropdown-toggle" data-toggle="dropdown"' + autofocus + ' role="button">' +
+          '</a>' +
           '<div class="dropdown-menu ' + (version.major === '4' ? '' : classNames.SHOW) + '" role="combobox">' +
           header +
           searchbox +
@@ -1889,9 +1889,10 @@
 
         if (that.options.liveSearch) {
           that.$searchbox.focus();
-        } else {
-          that.$menuInner.focus();
-        }
+        } 
+        // else {
+        //   that.$menuInner.focus();
+        // }
       });
 
       this.$menuInner.on('click', 'li a', function (e, retainActive) {
