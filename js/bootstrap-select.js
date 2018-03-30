@@ -1890,9 +1890,9 @@
         if (that.options.liveSearch) {
           that.$searchbox.focus();
         } 
-        // else {
-        //   that.$menuInner.focus();
-        // }
+        else {
+          that.$menuInner.focus();
+        }
       });
 
       this.$menuInner.on('click', 'li a', function (e, retainActive) {
@@ -2065,7 +2065,7 @@
           changed_arguments = null;
         },
         'focus': function () {
-          that.$button.focus();
+          // that.$button.focus();
         }
       });
     },
